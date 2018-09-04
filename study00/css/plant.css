@@ -1,0 +1,25 @@
+table{
+    background-color: azure;
+    border: black solid;
+    width: 100%;
+}
+
+td{
+    border: black solid;
+    text-align: center;
+    width: 5%;
+}
+
+
+.item{
+    font-weight: bold;
+}
+
+.data{
+    font-size: 12pt;
+    font-weight: lighter;
+}
+
+.first{
+    width: 20%;
+}
