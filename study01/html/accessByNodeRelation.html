@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        .selected{
+            background-color: #66f;
+        }
+    </style>
+    
+</head>
+<body>
+    <ol id="book">
+        <li id="java">java讲义</li>
+        <li id="ssh">EE实战</li>
+        <li id="ajax" class="selected">Ajax讲义</li>
+        <li id="xml">xml讲义</li>
+        <li id="ejb">EE经典实战</li>
+        <li id="workflow">Android</li>
+    </ol>
+
+    <input type="button" value="父节点" onclick="change(curTarget.paraentNode);">
+    <input type="button" value="第一个" onclick="change(curTarget.parentNode.firstChild.nextSibling)">
+    <input type="button" value="上一个" onclick="change(curTarget.previousSibling.previousSibling)">
+    <input type="button" value="下一个" onclick="change(curTarget.nextSibling.nextSibling)">
+    <input type="button" value="最后一个" onclick="change(curTarget.parentNode.lastChild)">
+
+    <script type="text/javascript">
+        var curTarget =document.getElementById("ajax");
+        var change = function (target) {
+            alert(target.innerHTML);
+          }
+    </script>
+</body>
+</html>

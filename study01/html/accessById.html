@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>get Element byID</title>
+    <script type="text/javascript">
+        var accessById = function() {
+            alert(document.getElementById("a").innerHTML + "\n" + 
+            document.getElementById("b").value);
+        }
+    </script>
+</head>
+<body>
+    <div id="a">aaaaa</div>
+    <textarea name="b" id="b" cols="25" rows="3">bbbbbbbbb</textarea>
+    <input type="button" value="访问两个元素" onclick="accessById();">
+</body>
+</html>
