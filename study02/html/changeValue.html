@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/changeValue.css">
+    <title>Edit table value</title>
+</head>
+<body>
+   改变第<input type="text" id="row" size="2"/>行， 第<input type="text" id="cel" size="2"/> 的值为： 
+   <input type="text" id="value" size="16"><br>
+   <div>
+        <input type="button" value="change" id="changeBtn" onclick="changeFun()"/>
+   </div>
+ 
+   <table id="t">
+       <tr>
+            <td>aaaasssssssssss</td>
+            <td>bbbbsssssssssss</td>
+       </tr>
+       <tr> 
+            <td>ccccsssssssssss</td>
+            <td>ddddsssssssssss</td>
+        </tr>
+       <tr>
+            <td>eeeessssssssss</td>
+            <td>ffffssssssssss</td>
+       </tr>
+   </table>
+
+   <script type="text/javascript">
+        var changeFun = function() {
+            var colNum = document.getElementById("cel").value;
+            var rowNum = document.getElementById("row").value;
+            rowNum = parseInt(rowNum);
+            colNum = parseInt(colNum);
+            var value = document.getElementById("value").value;
+            var t = document.getElementById("t");
+
+            if(isNaN(rowNum) || isNaN(colNum)){
+                alert("你输入的行数或列数不是整数，请核对！！")
+                return false;
+            }
+            if(rowNum > t.rows.length || colNum > t.rows.item(0).cells.length){
+                alert("超过界限！")
+                return false;
+            }
+            
+            t.rows.item(rowNum - 1).cells.item(colNum - 1).innerHTML = value;
+        }
+   </script>
+</body>
+</html>
