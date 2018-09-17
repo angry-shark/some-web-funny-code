@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <select name="mySelect" id="mySelect" size="6">
+        <option value="java">java</option>
+        <option value="ssh">ee实战</option>
+        <option value="ajax">ajax</option>
+        <option value="xml">xml</option>
+        <option value="ejb">经典EE</option>
+        <option value="workflow">android</option>
+    </select><br>
+
+    <input type="button" value="第一个" onclick="change(curTarget.options[0])">
+    <input type="button" value="上一个" onclick="change(curTarget.options[curTarget.selectedIndex -1])">
+    <input type="button" value="下一个" onclick="change(curTarget.options[curTarget.selectedIndex +1])">
+    <input type="button" value="最后一个" onclick="change(curTarget.options[curTarget.length -1])">
+
+    <script type="text/javascript">
+        var curTarget =document.getElementById("mySelect");
+        var change = function (target) {
+            alert(target.text);
+          }
+    </script>
+</body>
+</html>
