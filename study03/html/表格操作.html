@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格操作</title>
+</head>
+<script type="text/javascript">
+    function add(){
+        var table = document.getElementById("table");
+        var rowLength = table.rows.length;
+        var newRow = table.insertRow(table.rows.length);
+        for(var i = 0; i < 2 ; i++){
+            var cell = newRow.insertCell(i);
+            cell.innerHTML = (rowLength + 1) + "" + (i+1);
+        }
+    }
+
+    function del(){
+        var table = document.getElementById("table");
+        if(table.rows.length < 1){
+            return;
+        }
+        else{
+            table.deleteRow(table.rows.length-1);
+        }
+    }
+</script>
+<body>
+    <table id="table" width="70%" border="1">
+        <tr>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+    </table>
+
+    <div style="position:absolute;bottom:0;">
+        <input type="button" value="add" onclick="add()">&nbsp;&nbsp;
+        <input type="button" value="delete" onclick="del()">
+    </div>
+
+
+</body>
+</html>

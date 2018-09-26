@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>添加元素节点</title>
+</head>
+<body>
+    <input type="button" value="插入水平线" onclick="AddHr()">
+</body>
+<script type="text/javascript">
+    function AddHr(){
+        var body = document.querySelector("body");
+        
+        var hr = document.createElement("hr");
+
+        hr.width = "80%";
+
+        var newNode = document.createTextNode("Hello World");
+
+        body.appendChild(hr);
+        body.appendChild(newNode);
+
+    }
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定时更换图片</title>
+</head>
+<body>
+    <img src="../img/bg00.jpg" id="img" width="80%" style="margin: auto"/>
+</body>
+<script type="text/javascript">
+    var image = ["bg00.jpg","bg01.jpg","bg02.jpg","bg03.jpg","bg04.jpg","bg05.jpg","bg06.jpg","bg07.jpg",
+    "黑二甲.jpg"];
+
+    var index = 1;
+
+    function changePicture(){
+        index = (index%9)+1;
+        var img = document.getElementById("img");
+        img.src = "../img/" + image[index];
+    }
+
+    window.setInterval("changePicture()",300);
+</script>
+</html>

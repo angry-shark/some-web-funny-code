@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定时器</title>
+</head>
+<body>
+    <p style="color:red" id="num">0</p>
+    <input type="button" value="停止" onclick="stopCount()">
+    <input type="button" value="开始" onclick="startCount()">
+    <br>
+    <br>
+    <input type="button" name="openbaidu" value="openbaidu" onclick="openbaidupage()">
+</body>
+<script type="text/javascript">
+    var sec = 0;
+    var timer;
+    function stopCount() {
+        sec = 0;
+        document.getElementById("num").innerHTML = sec;
+        clearInterval(timer);
+    }
+
+    function startCount(){
+        timer = setInterval("count();",100);
+    }
+
+    function count(){
+        document.getElementById("num").innerHTML = sec++;
+    }
+
+    function openbaidupage(){
+        window.open("http://www.baidu.com");
+    }
+</script>
+</html>

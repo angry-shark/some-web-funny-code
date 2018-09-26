@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .selected{
+            background-color: gray;
+        }
+        .border{
+            border: solid 3px blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">我是myDiv</div>
+    <div class="selected">我的class是Selected</div>
+    <img src="../img/黑二甲.jpg" alt="黑尔加" width="40%">
+    <img src="../img/黑二甲.jpg" alt="黑二甲" width="20%" class="border">
+    <input type="button" value="测试querySelected方法" onclick="testQuerySelected()">
+</body>
+<script type="text/javascript">
+    function testQuerySelected(){
+        var body = document.querySelector("body");
+
+        var myDiv = document.querySelector("#myDiv");
+        alert(myDiv.innerHTML);
+
+        var selected = document.querySelector(".selected");
+        alert(selected.innerHTML);
+
+        var img = document.body.querySelector("img.border");
+        alert(img.src);
+    }
+</script>
+</html>

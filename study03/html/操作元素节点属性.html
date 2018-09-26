@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>操作元素节点属性</title>
+    <style>
+        .selected{
+            background-color: gray;
+        }
+        .border{
+            border: solid 3px blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1" class="class1">我是第一个p</p>
+    <img src="../img/黑二甲.jpg" alt="我是一张图片" id="img1" width="50%"/><br>
+    <input type="text" value="我是一个文本框" id="input1"/> <br>
+    <img src="../img/黑二甲.jpg" alt="I am a picture" id="img2" width="25%"/> <br>
+    <input type="button" value="获取元素属性" onclick="getElementAttribute()">
+    <input type="button" value="设置元素属性" onclick="setElementAttribute()">
+</body>
+<script type="text/javascript">
+
+    function getElementAttribute(){
+        var  nodeText = document.getElementById("input1");
+        alert(nodeText.value);
+
+        var nodeImg = document.getElementById("img1");
+        alert(nodeImg.alt);
+
+        var nodeP = document.getElementById("p1");
+        alert(nodeP.className);
+    }
+
+    function setElementAttribute() {
+        document.getElementById("img1").style.width = "75%";
+    }
+</script>
+
+</html>
